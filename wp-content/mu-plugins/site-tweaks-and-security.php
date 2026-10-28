@@ -24,7 +24,7 @@ function sitemap_menu_shortcode($atts) {
       in_array('menu-item-language', $classes) ||
       strpos(strtolower($item->title), 'english') !== FALSE ||
       strpos(strtolower($item->title), 'मराठी') !== FALSE ||
-      strpos(strtolower($item->title), 'konkani') !== FALSE
+      strpos(strtolower($item->title), 'कोंकणी') !== FALSE
     ) {
       continue;
     }
