@@ -246,8 +246,9 @@ add_action('admin_enqueue_scripts', function () {
 add_action('init', array('CSF', 'setup'), 999);
 
 function add_multiple_sri_attributes($tag, $handle, $src) {
+  //compute at https://centralcsp.com/en/tools/sri-hash/
   $scripts_to_protect = [
-    'chart-js' => 'sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ',
+    'chart-js' => 'sha384-Emf5ZVIUiarAdhkgtqK+5/Z5qIvM6QoVrS+qAVtfyZVuD5lIHrac0me485+Antp0',
     'crypto-js' => 'sha384-S3wQ/l0OsbJoFeJC81UIr3JOlx/OzNJpRt1bV+yhpWQxPAahfpQtpxBSfn+Isslc',
     'bootstrap5' => 'sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz',
     'leaflet-js' => 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH',
