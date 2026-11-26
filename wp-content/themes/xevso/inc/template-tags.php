@@ -15,17 +15,13 @@ if ( ! function_exists( 'xevso_posted_on' ) ) :
 			esc_attr( get_the_modified_date( DATE_W3C ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$posted_on = sprintf(
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'. $time_string .'</a>'
-		);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'. $time_string .'</a>';
 		echo '<span class="posted-on">'. $posted_on .'</span>';
 	}
 endif;
 if ( ! function_exists( 'xevso_posted_by' ) ) :
 	function xevso_posted_by() {
-		$byline = sprintf(
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'. esc_html( get_the_author() ) .'</a></span>'
-		);
+		$byline = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'. esc_html( get_the_author() ) .'</a></span>';
 		echo '<span class="byline">'. $byline .'</span>';
 	}
 endif;
